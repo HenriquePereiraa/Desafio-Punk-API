@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () =>{
                 var nome = data[0].name
                 var descricao = data[0].description
                 var img = data[0].image_url
+
+                if(img == null)
+                {
+                    img = 'https://st.depositphotos.com/1001686/2320/i/600/depositphotos_23203474-stock-photo-cold-beer-bottle-with-drops.jpg';
+                }
                 
             
                 beerImage[i].style.cssText = 'background-image:url('+img+')';

@@ -26,6 +26,13 @@ section.banner{
     background-size: cover;
 }
 
+section.banner > .logo h2{
+    color:rgba(220, 220, 220,0.5);
+    font-size: 40px;
+    padding: 2%;
+    cursor:pointer;
+}
+
 .info-banner{
     position: absolute;
     top:50%;
@@ -118,6 +125,10 @@ section.beers > .center{
 /*FOOTER*/
 
 footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding:20px 2%;
     background: linear-gradient(344deg, rgba(186,48,36,1) 0%, rgba(2,0,36,1) 100%, rgba(0,212,255,1) 100%);
 }
@@ -125,4 +136,39 @@ footer{
     margin: 5px 0;
     color:white;
 }
+footer > .logo h2{
+    color:rgba(220, 220, 220,0.5);
+    font-size: 40px;
+}
+.social-media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.social-media h2{
+    color:rgba(220, 220, 220,0.5);
+    font-size: 20px;
+    padding:0 5px;
+}
 
+@media screen and (max-width:768px)
+{
+    .contato{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    footer > .logo{
+        width: 100%;
+        display: inline-block;
+        order: 1;
+    }
+    footer > .logo h2{text-align: center; margin: 10px 0;}
+    .social-media{
+        width: 100%;
+        margin:10px 0;
+    }
+    .social-media h2{
+       justify-self: center;
+    }
+}
