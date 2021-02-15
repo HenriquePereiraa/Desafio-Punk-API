@@ -29,10 +29,16 @@ document.addEventListener('DOMContentLoaded', () =>{
         })
     }
     
+    var janelaPopUp = document.querySelector('.janela-popup');
+    var close = document.querySelector('.close')
+    document.querySelector('.btn-cadastro').addEventListener("click", function() {
+        janelaPopUp.style.display = 'block';
+        close.addEventListener("click", function(){
+            janelaPopUp.style.display = 'none'
+        })
+    })
 
-    // TODO: terminar alerta e fazer pop-up 
     var button = document.querySelectorAll('.conhecer')
-    console.log(button.length)
     for(let i = 0; i < button.length; i++){
         button[i].onclick = function(){
             Swal.fire({
@@ -43,6 +49,4 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     }
     
-    
-
 })
